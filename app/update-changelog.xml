@@ -9,4 +9,14 @@
 - Bug fixes
     </releaseNotes>
   </update>
+    <update>
+    <latestVersion>2.0.0</latestVersion>
+    <latestVersionCode>10</latestVersionCode>
+    <url>https://github.com/Emmanuel1017/Android_client_with_firebase_realtime_DB_and_Notification-service/releases</url>
+    <releaseNotes>
+- First evolution
+- Second evolution
+- Bug fixes
+    </releaseNotes>
+  </update>
 </AppUpdater>
