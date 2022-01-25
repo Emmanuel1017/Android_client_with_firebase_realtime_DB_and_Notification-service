@@ -107,20 +107,23 @@ public class MainActivity extends AppCompatActivity implements ContactsAdapter.C
 
 
 
-        AppUpdater appUpdater = new AppUpdater(this)
-         .setTitleOnUpdateAvailable("Update available")
-                .setContentOnUpdateAvailable("Check out the latest version available of my app!")
-                .setTitleOnUpdateNotAvailable("Update not available")
-                .setContentOnUpdateNotAvailable("No update available. Check for updates again later!")
-                .setButtonUpdate("Update now?")
-
-                .setButtonDismiss("Maybe later")
-                .setUpdateFrom(UpdateFrom.XML)
-	            .setButtonDoNotShowAgain("Huh, not interested")
-	             .setIcon(R.drawable.logo) // Notification icon
-                .setCancelable(false) // Dialog could not be dismissable
-                .showEvery(5);
-           appUpdater.start();
+        try {
+            AppUpdater appUpdater = new AppUpdater(MainActivity.this)
+                    .setUpdateFrom(UpdateFrom.GITHUB)
+                    .setGitHubUserAndRepo("Emmanuel1017", "Android_client_with_firebase_realtime_DB_and_Notification-service")
+                    .setTitleOnUpdateAvailable("Update available")
+                    .setContentOnUpdateAvailable("Check out the latest version available of the app!")
+                    .setTitleOnUpdateNotAvailable("Update not available")
+                    .setContentOnUpdateNotAvailable("No update available. Check for updates again later!")
+                    .setButtonUpdate("Update now?")
+                    .setButtonDismiss("Maybe later")
+                    .setButtonDoNotShowAgain("Huh, not interested")
+                    .setIcon(R.drawable.logo) // Notification icon
+                    .setCancelable(false); // Dialog could not be dismissable
+            appUpdater.start();
+        }catch (Exception e)
+        {
+            Log.e("Update Error",e.getMessage());        }
 
 
         checkPermissionboot();
