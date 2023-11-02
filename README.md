@@ -37,6 +37,6 @@ I encourage contributions and learning together. If you have ideas for making my
 
 ## Support and Feedback:
 
-For questions, feedback, or just to chat about Android development and Firebase, you can reach out to me at [email@example.com].
+For questions, feedback, or just to chat about Android development and Firebase.
 
 ### Happy Learning and Keep Exploring! 📚🚀
